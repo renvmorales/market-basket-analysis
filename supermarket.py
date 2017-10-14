@@ -11,9 +11,14 @@ import pandas as pd
 dataset = arff.loadarff('supermarket.arff')
 
 
+
 # convert to dataframe using pandas
 df = pd.DataFrame(dataset[0])
-print(df.head(100))
+
+
+# discard the last column ('total')
+df = df.iloc[:,0:-1] 
+# print(df.head(10))
 
 
 
