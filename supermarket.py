@@ -70,3 +70,5 @@ rules = association_rules(fq_itemsets, metric="lift", min_threshold=1.2)
 print('Most significant association rules are:\n',
 	rules.sort_values(by=['support','confidence'], ascending=False).head(10))
 
+# Try to maximize lift (lift>1) and keep all other metrics >0.5 to find
+# reliable rules!
