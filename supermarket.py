@@ -11,7 +11,7 @@ print('Loading raw supermarket basket data ...\n')
 
 # read supermarket arrf file available at 
 # http://storm.cis.fordham.edu/~gweiss/data-mining/datasets.html
-# .arrf files are Weka datasets types
+# .arrf file should be placed inside this folder
 dataset = arff.loadarff('supermarket.arff')
 
 
