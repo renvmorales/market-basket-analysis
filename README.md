@@ -15,6 +15,6 @@ http://storm.cis.fordham.edu/~gweiss/data-mining/weka-data/supermarket.arff
 
 A quick overview of data shows that there was a total of 85762 different purchased items, and the average number of purchased item per transaction was 18.5.
 
-Unfortunately, there is no more detailed information on the extraction and dataset provenance (except that it is orignally from NZ). Further observations can also be found at
+Unfortunately, there is no more detailed information on the extraction and dataset provenance (except that it is originally from NZ). Further observations can also be found at
 
 http://weka.8497.n7.nabble.com/question-of-using-supermarket-arff-for-academic-research-td2573.html
