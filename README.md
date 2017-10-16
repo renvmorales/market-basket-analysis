@@ -7,10 +7,13 @@ mlxtend library 'apriori' algorithm was used here to quickly find rules that are
 Since the 'lift' metric indicates an independence scenario for a certain (A) -> (B) rule when lift is equal to 1, reliable association rules are found by maximizing the lift value. It is important to also consider rules where other metrics, such as support and confidence, reach at least a minimal tolerance value.
 
 
+
 ## About the data 
-The dataset corresponds to real supermarket transactions stored in a .arff file that integrates the Weka project  (https://www.cs.waikato.ac.nz/ml/weka/) and can be found at:
+The dataset corresponds to a real supermarket transactional table (4627 X 217 binary matrix) stored in a .arff format. The raw dataset file integrates the Weka project  (https://www.cs.waikato.ac.nz/ml/weka/) and can be found at:
 
 http://storm.cis.fordham.edu/~gweiss/data-mining/weka-data/supermarket.arff
+
+The total different purchased items is 85762, and the average number of purchased item per transaction is 18.5.
 
 Unfortunately, it seems that there is little information on the dataset itself: 
 http://weka.8497.n7.nabble.com/question-of-using-supermarket-arff-for-academic-research-td2573.html
