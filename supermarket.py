@@ -15,11 +15,13 @@ print('Loading raw supermarket basket data ...\n')
 dataset = arff.loadarff('supermarket.arff')
 
 
-
 # convert to dataframe using pandas
 df = pd.DataFrame(dataset[0])
-# print(df.head())
+# print(df.head(10))
 
+# Raw dataframe has (4627, 217) shape
+print('Original dataset size: ', df.shape)
+# print('\n')
 
 
 # discard the last column ('total')
@@ -34,9 +36,7 @@ print('All possible entries in dataframe are:\n',
 
 
 
-
-
-print('\nEncoding dataframe to binary values ...\n')
+print('\nEncoding dataframe to binary values ...')
 def encode_units(x):  # encoder function for each transaction
     if str(x) == "b'?'":
         return 0
@@ -50,6 +50,13 @@ df_onehot = df.applymap(encode_units)
 # print('Original Transaction table:\n', df_onehot.head())
 
 
+
+# some descriptive statistics on the dataset
+print('Total different purchased items: ', df_onehot.values.sum())
+print('Total number of transactions with at least one purchased item: ', 
+	np.sum(df_onehot.values.sum(axis=1)>0, axis=0) )
+print('Average number of purchased items per transaction: %.1f' % 
+	np.mean(df_onehot.values.sum(axis=1)) )
 
 
 
@@ -67,7 +74,7 @@ fq_itemsets = apriori(df_onehot, min_support=0.3, use_colnames=True)
 
 # list confidence and lift metrics with respect to the association rules
 rules = association_rules(fq_itemsets, metric="lift", min_threshold=1.2)
-print('Most significant association rules are:\n',
+print('\nMost significant association rules are:\n',
 	rules.sort_values(by=['support','confidence'], ascending=False).head(10))
 
 # Try to maximize lift (lift>1) and keep all other metrics >0.5 to find
