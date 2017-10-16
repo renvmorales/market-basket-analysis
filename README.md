@@ -2,9 +2,9 @@
 
 The goal of a basket analysis is to find interesting and relevant association rules among purchased items.
 
-mlxtend library 'apriori' algorithm was used here to quickly find rules that are related with a minimum metric of choice value (eg. lift).
+mlxtend library 'apriori' algorithm was used here to localize most frequent items, e.g., the ones that satisfies a minimum support value criterion.
 
-Since the 'lift' metric indicates an independence scenario for a certain (A) -> (B) rule when lift is equal to 1, reliable association rules are found by maximizing the lift value. It is important to also consider rules where other metrics, such as support and confidence, reach at least a minimal tolerance value.
+Next, frequent items are aggregated and submitted to a lift evaluation in order to find candidates of 'good' rules. Since a lift value equals to 1 indicates an independence scenario for a certain (A) -> (B), reliable association rules are found by maximizing this metric. However, it is equally important to check whether other metrics, such as support and confidence, reach a desired tolerance like 50 %.
 
 
 
