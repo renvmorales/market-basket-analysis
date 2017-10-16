@@ -9,11 +9,12 @@ Since the 'lift' metric indicates an independence scenario for a certain (A) -> 
 
 
 ## About the data 
-The dataset corresponds to a real supermarket transactional table (4627 X 217 binary matrix) stored in a .arff format. The raw dataset file integrates the Weka project  (https://www.cs.waikato.ac.nz/ml/weka/) and can be found at:
+The dataset corresponds to a real supermarket transactional table (4627 rows and 217 columns) stored in a .arff format. The raw dataset file integrates the Weka project (https://www.cs.waikato.ac.nz/ml/weka/) and can be found at:
 
 http://storm.cis.fordham.edu/~gweiss/data-mining/weka-data/supermarket.arff
 
-The total different purchased items is 85762, and the average number of purchased item per transaction is 18.5.
+A quick overview of data shows that there was a total of 85762 different purchased items, and the average number of purchased item per transaction was 18.5.
 
-Unfortunately, it seems that there is little information on the dataset itself: 
+Unfortunately, there is no more detailed information on the extraction and dataset provenance (except that it is orignally from NZ). Further observations can also be found at
+
 http://weka.8497.n7.nabble.com/question-of-using-supermarket-arff-for-academic-research-td2573.html
